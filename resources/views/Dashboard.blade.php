@@ -14,7 +14,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-				@include('layouts.topbar')
+                <top-bar></top-bar>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
