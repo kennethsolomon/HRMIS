@@ -2,10 +2,10 @@
     <!-- Nav Item - User Information -->
 		<li class="nav-item dropdown no-arrow">
 			<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-bind:key="prof.id" v-for="prof in profile">
+				<span class="mr-2 d-none d-lg-inline text-gray-600 small">{{prof.user}}</span>
 				<img class="img-profile rounded-circle"
-					src="img/undraw_profile.svg">
+					v-bind:src="prof.img">
 			</a>
 			<!-- Dropdown - User Information -->
 			<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -30,3 +30,28 @@
 			</div>
 		</li>
 </template>
+
+<script>
+export default {
+	name: "Profile",
+	components:{
+
+	},
+	data(){
+		return {
+			profile:[
+				{
+					id: 1,
+					user: "Douglas McGee",
+					img: "img/undraw_profile.svg",
+				}
+			]
+		}
+	}
+	
+}
+</script>
+
+<style lang="stylus" scoped>
+
+</style>
